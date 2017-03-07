@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'KiwiPopularDes' do
+  pod 'Alamofire', :git => 'https://github.com/Homely/Alamofire.git', :branch => 'ios8'
+  pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
+end
