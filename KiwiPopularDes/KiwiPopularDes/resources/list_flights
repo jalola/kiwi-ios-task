@@ -1,0 +1,511 @@
+{
+"connections": [],
+"currency": "EUR",
+"del": 0,
+"time": 1,
+"search_params": {
+"to_type": "anywhere",
+"flyFrom_type": "country",
+"seats": {
+"infants": 0,
+"passengers": 1,
+"adults": 1,
+"children": 0
+}
+},
+"ref_tasks": null,
+"currency_rate": 1,
+"data": [
+{
+"mapIdfrom": "prague_cz",
+"duration": {
+"total": 63000,
+"return": 0,
+"departure": 63000
+},
+"flyTo": "FCO",
+"conversion": {
+"EUR": 43
+},
+"mapIdto": "rome_it",
+"nightsInDest": null,
+"id": "298812060|307634102",
+"fly_duration": "17h 30m",
+"countryTo": {
+"code": "IT",
+"name": "Italy"
+},
+"baglimit": {
+"hand_width": 32,
+"hand_length": 42,
+"hold_weight": 15,
+"hand_height": 20,
+"hand_weight": 10
+},
+"aTimeUTC": 1490737200,
+"p3": 1,
+"price": 43,
+"bags_price": {
+"1": 52,
+"2": 109
+},
+"cityTo": "Rome",
+"transfers": [],
+"flyFrom": "PRG",
+"dTimeUTC": 1490674200,
+"p2": 1,
+"countryFrom": {
+"code": "CZ",
+"name": "Czech Republic"
+},
+"hidden_flights": [],
+"p1": 1,
+"dTime": 1490681400,
+"popularity": 502727,
+"booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFy4rT7ien3/7I0q1XUPwunOxBmbrIvVTu15ZUDFo6FMbvWBkL30Y2tV5qUOUjKHP+bLcaBMcWPYKNDoU9Ni+3nZy+SIfwRait6AiuGHcZvzS7JQUmc3FC/J78kdHLfpDj5wGGhVVVJLtPKY6zKNG5fmANU5PnPqZq3qYwJ55ohaFL+xtV5pxLQz16Q9AO3m739/3dSftjszK1KAvKAxjaxxU8xiZg0NG2awlvNiD/S2yuIWTKq46XEgjisRFoKyW1Bu4LcEEh0hhXFMfi8utHEgBtr/WF4sDb8+CxLyzomFkPs4vGsyO/YjGjr5kG8bUH",
+"cityFrom": "Prague",
+"aTime": 1490744400,
+"route": [
+{
+"bags_recheck_required": false,
+"mapIdfrom": "prague_cz",
+"flight_no": 2693,
+"original_return": 0,
+"lngFrom": 14.4208,
+"flyTo": "BRI",
+"mapIdto": "bari_it",
+"id": "298812060",
+"source": null,
+"latFrom": 50.088,
+"lngTo": 16.8512,
+"dTimeUTC": 1490674200,
+"aTimeUTC": 1490680800,
+"return": 0,
+"price": 1,
+"cityTo": "Bari",
+"flyFrom": "PRG",
+"latTo": 41.1177,
+"dTime": 1490681400,
+"found_on": null,
+"airline": "W6",
+"cityFrom": "Prague",
+"aTime": 1490688000
+},
+{
+"bags_recheck_required": true,
+"mapIdfrom": "bari_it",
+"flight_no": 7076,
+"original_return": 0,
+"lngFrom": 16.8512,
+"flyTo": "FCO",
+"mapIdto": "rome_it",
+"id": "307634102",
+"source": null,
+"latFrom": 41.1177,
+"lngTo": 12.4839,
+"dTimeUTC": 1490733300,
+"aTimeUTC": 1490737200,
+"return": 0,
+"price": 1,
+"cityTo": "Rome",
+"flyFrom": "BRI",
+"latTo": 41.8947,
+"dTime": 1490740500,
+"found_on": null,
+"airline": "FR",
+"cityFrom": "Bari",
+"aTime": 1490744400
+}
+],
+"distance": 924.19
+},
+{
+"mapIdfrom": "prague_cz",
+"duration": {
+"total": 5400,
+"return": 0,
+"departure": 5400
+},
+"flyTo": "AMS",
+"conversion": {
+"EUR": 46
+},
+"mapIdto": "amsterdam_nl",
+"nightsInDest": null,
+"id": "299587785",
+"fly_duration": "1h 30m",
+"countryTo": {
+"code": "NL",
+"name": "Netherlands"
+},
+"baglimit": {
+"hand_width": 45,
+"hand_length": 56,
+"hold_weight": 20,
+"hand_height": 25,
+"hand_weight": 15
+},
+"aTimeUTC": 1491395100,
+"p3": 1,
+"price": 46,
+"bags_price": {
+"1": 25,
+"2": 50
+},
+"cityTo": "Amsterdam",
+"transfers": [],
+"flyFrom": "PRG",
+"dTimeUTC": 1491389700,
+"p2": 1,
+"countryFrom": {
+"code": "CZ",
+"name": "Czech Republic"
+},
+"hidden_flights": [],
+"p1": 1,
+"dTime": 1491396900,
+"popularity": 324909,
+"booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFR4BSIrjlahVmxUzl/JXH0UE7Klotpx4eVFmD5nySIbsGbJpi+BvHLeqA+t+zK6M56Svyn8LjciKtxWOju8nAr/RKqs2aHb3E9OqkQ8XWXf2DUov08Yt6YkGoqoNI81cm7aw1x1bUUyGAJEQo5f4QnBMLuuWQzgRdQqapxc7HsYb0UYThYXdl+sX7sVbBRfR9+ZRYLd+lWIkOiUOvkEFD25IQSSr2UWzNgfiydlaiAIGFz1Ogk3igoFUF6FZ0/NFfA1xCGWlwSw9qImfhjbePU04X+cbYjDshshvECHbj7Vg=",
+"cityFrom": "Prague",
+"aTime": 1491402300,
+"route": [
+{
+"bags_recheck_required": false,
+"mapIdfrom": "prague_cz",
+"flight_no": 7906,
+"original_return": 0,
+"lngFrom": 14.4208,
+"flyTo": "AMS",
+"mapIdto": "amsterdam_nl",
+"id": "299587785",
+"source": null,
+"latFrom": 50.088,
+"lngTo": 4.88969,
+"dTimeUTC": 1491389700,
+"aTimeUTC": 1491395100,
+"return": 0,
+"price": 1,
+"cityTo": "Amsterdam",
+"flyFrom": "PRG",
+"latTo": 52.374,
+"dTime": 1491396900,
+"found_on": null,
+"airline": "U2",
+"cityFrom": "Prague",
+"aTime": 1491402300
+}
+],
+"distance": 710.76
+},
+{
+"mapIdfrom": "prague_cz",
+"duration": {
+"total": 78600,
+"return": 0,
+"departure": 78600
+},
+"flyTo": "DWC",
+"conversion": {
+"EUR": 87
+},
+"mapIdto": "dubai_ae",
+"nightsInDest": null,
+"id": "298469154|298462859|298575236",
+"fly_duration": "21h 50m",
+"countryTo": {
+"code": "AE",
+"name": "United Arab Emirates"
+},
+"baglimit": {
+"hand_width": 32,
+"hand_length": 42,
+"hold_weight": 15,
+"hand_height": 20,
+"hand_weight": 10
+},
+"aTimeUTC": 1490539800,
+"p3": 1,
+"price": 87,
+"bags_price": {
+"1": 77,
+"2": 164
+},
+"cityTo": "Dubai",
+"transfers": [],
+"flyFrom": "PRG",
+"dTimeUTC": 1490461200,
+"p2": 1,
+"countryFrom": {
+"code": "CZ",
+"name": "Czech Republic"
+},
+"hidden_flights": [],
+"p1": 1,
+"dTime": 1490464800,
+"popularity": 292985,
+"booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFX0M0Fa7QhrmzFCSmz4vVJkiIHdiYLpEWpR+VVsVgpQlSBkUrancuLXZqgZfyT0ANvT/SLMYu8IiTcMb9uHYq+7UY0nGvuLck7+dzoleykpu81fpDNCwfjMJf00xfnI0LNQEz86TX0aAL0Yte4sna8bAYvopJwkQP/f+JaoPNINXmfoKpLNr5iPdlUaYPIcU2ucshzOHKG5wDGM8CcPijSZDFitGG/kfa0scRj0Ky78QOvJQZV7TxRdrue6wYMp8dvYsvFRQ08q+PW7Da5nSvKgYpw2l/DCKfaPl4e9Wlae0svB3aN4YMUKE52Y/kNjPMvzLqAX31IwYdx1yWNunC0g==",
+"cityFrom": "Prague",
+"aTime": 1490554200,
+"route": [
+{
+"bags_recheck_required": false,
+"mapIdfrom": "prague_cz",
+"flight_no": 2122,
+"original_return": 0,
+"lngFrom": 14.4208,
+"flyTo": "CRL",
+"mapIdto": "brussels_be",
+"id": "298469154",
+"source": null,
+"latFrom": 50.088,
+"lngTo": 4.34878,
+"dTimeUTC": 1490461200,
+"aTimeUTC": 1490466300,
+"return": 0,
+"price": 1,
+"cityTo": "Brussels",
+"flyFrom": "PRG",
+"latTo": 50.8504,
+"dTime": 1490464800,
+"found_on": null,
+"airline": "FR",
+"cityFrom": "Prague",
+"aTime": 1490469900
+},
+{
+"bags_recheck_required": true,
+"mapIdfrom": "brussels_be",
+"flight_no": 6352,
+"original_return": 0,
+"lngFrom": 4.34878,
+"flyTo": "SOF",
+"mapIdto": "sofia_bg",
+"id": "298462859",
+"source": null,
+"latFrom": 50.8504,
+"lngTo": 23.3242,
+"dTimeUTC": 1490505300,
+"aTimeUTC": 1490514900,
+"return": 0,
+"price": 1,
+"cityTo": "Sofia",
+"flyFrom": "CRL",
+"latTo": 42.6975,
+"dTime": 1490512500,
+"found_on": null,
+"airline": "FR",
+"cityFrom": "Brussels",
+"aTime": 1490525700
+},
+{
+"bags_recheck_required": true,
+"mapIdfrom": "sofia_bg",
+"flight_no": 4429,
+"original_return": 0,
+"lngFrom": 23.3242,
+"flyTo": "DWC",
+"mapIdto": "dubai_ae",
+"id": "298575236",
+"source": null,
+"latFrom": 42.6975,
+"lngTo": 55.1552295685,
+"dTimeUTC": 1490522400,
+"aTimeUTC": 1490539800,
+"return": 0,
+"price": 1,
+"cityTo": "Dubai",
+"flyFrom": "SOF",
+"latTo": 25.088623227,
+"dTime": 1490533200,
+"found_on": null,
+"airline": "W6",
+"cityFrom": "Sofia",
+"aTime": 1490554200
+}
+],
+"distance": 4457.67
+},
+{
+"mapIdfrom": "prague_cz",
+"duration": {
+"total": 60600,
+"return": 0,
+"departure": 60600
+},
+"flyTo": "JFK",
+"conversion": {
+"EUR": 235
+},
+"mapIdto": "new-york_us",
+"nightsInDest": null,
+"id": "298092610|298100765",
+"fly_duration": "16h 50m",
+"countryTo": {
+"code": "US",
+"name": "United States"
+},
+"baglimit": {
+"hand_width": 40,
+"hand_length": 55,
+"hold_weight": 20,
+"hand_height": 23,
+"hand_weight": 10
+},
+"aTimeUTC": 1490234400,
+"p3": 1,
+"price": 235,
+"bags_price": {
+"1": 50,
+"2": 110
+},
+"cityTo": "New York",
+"transfers": [],
+"flyFrom": "PRG",
+"dTimeUTC": 1490173800,
+"p2": 1,
+"countryFrom": {
+"code": "CZ",
+"name": "Czech Republic"
+},
+"hidden_flights": [],
+"p1": 1,
+"dTime": 1490177400,
+"popularity": 292359,
+"booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFqBYydGCCqmZ7z3Q40Z7ZzamQ4avBAuRYuj0eYB65mVUBzg749sLq3mo6Fho6TmIh7buB+yKYfvP5vqOC0cPXBuMKIfDgkpwyJ9mme8lKeb2ACupW+v7Rwwc+ovbbbDrJZTLyX2PIV3L3Fr3LzpE4JMNU9Afb3AMoi6PWtoY7NnYR4aQoNixzSEOJ6Iz8eoompnGOIw4RmwhSnORagKA2quUPSLzotxup2CWj/mgswRyjEoRevvx0nwiwTMh/uH3Gqm4Cf21zGMC+qf4MDYz1T4R0R3TXv7wHOirE/XmTXkBYL8Gz7GPqQgGfQoSTa7pBKWTpRmeGq0pUQ0S39qX7dQ==",
+"cityFrom": "Prague",
+"aTime": 1490220000,
+"route": [
+{
+"bags_recheck_required": false,
+"mapIdfrom": "prague_cz",
+"flight_no": 3581,
+"original_return": 0,
+"lngFrom": 14.4208,
+"flyTo": "CPH",
+"mapIdto": "copenhagen_dk",
+"id": "298092610",
+"source": null,
+"latFrom": 50.088,
+"lngTo": 12.5655,
+"dTimeUTC": 1490173800,
+"aTimeUTC": 1490178600,
+"return": 0,
+"price": 1,
+"cityTo": "Copenhagen",
+"flyFrom": "PRG",
+"latTo": 55.6759,
+"dTime": 1490177400,
+"found_on": null,
+"airline": "DY",
+"cityFrom": "Prague",
+"aTime": 1490182200
+},
+{
+"bags_recheck_required": true,
+"mapIdfrom": "copenhagen_dk",
+"flight_no": 7011,
+"original_return": 0,
+"lngFrom": 12.5655,
+"flyTo": "JFK",
+"mapIdto": "new-york_us",
+"id": "298100765",
+"source": null,
+"latFrom": 55.6759,
+"lngTo": -74.0135622025,
+"dTimeUTC": 1490203800,
+"aTimeUTC": 1490234400,
+"return": 0,
+"price": 1,
+"cityTo": "New York",
+"flyFrom": "CPH",
+"latTo": 40.7052700759,
+"dTime": 1490207400,
+"found_on": null,
+"airline": "DY",
+"cityFrom": "Copenhagen",
+"aTime": 1490220000
+}
+],
+"distance": 6578.98
+},
+{
+"mapIdfrom": "prague_cz",
+"duration": {
+"total": 4500,
+"return": 0,
+"departure": 4500
+},
+"flyTo": "TSF",
+"conversion": {
+"EUR": 27
+},
+"mapIdto": "venice_it",
+"nightsInDest": null,
+"id": "298129182",
+"fly_duration": "1h 15m",
+"countryTo": {
+"code": "IT",
+"name": "Italy"
+},
+"baglimit": {
+"hand_width": 32,
+"hand_length": 42,
+"hold_weight": 23,
+"hand_height": 25,
+"hand_weight": 10
+},
+"aTimeUTC": 1490181000,
+"p3": 1,
+"price": 27,
+"bags_price": {
+"1": 27,
+"2": 54
+},
+"cityTo": "Treviso",
+"transfers": [],
+"flyFrom": "PRG",
+"dTimeUTC": 1490176500,
+"p2": 1,
+"countryFrom": {
+"code": "CZ",
+"name": "Czech Republic"
+},
+"hidden_flights": [],
+"p1": 1,
+"dTime": 1490180100,
+"popularity": 288386,
+"booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFaxDP8Cs4U5VZ2efKOrdexWY79Ae4UsOUj80obDSBZ+4qzUC05GZlMwPST2Zw3hJ/QK3XHV3+WBXNlt1fajmLuy3vX+gHrVdryzOoDH/yz//2SwORJyHHhnwHQV/eCmS23tH3ga7P5H8THdHOaABg/nMiV/3nh5kn4xAvnPpx/3TMxM6DAMwU7ZOl332Rhcbbiar8CL2kEVakTx7gwvwQMKGylN779SqfOqqaA1gqfU2ak8ke6V3kcfPKgLLsJOH40myQdIXzZjmOh7ObmZpWfsilbC3Wu/q9RQIGGVdFqDk=",
+"cityFrom": "Prague",
+"aTime": 1490184600,
+"route": [
+{
+"bags_recheck_required": false,
+"mapIdfrom": "prague_cz",
+"flight_no": 2697,
+"original_return": 0,
+"lngFrom": 14.4208,
+"flyTo": "TSF",
+"mapIdto": "venice_it",
+"id": "298129182",
+"source": null,
+"latFrom": 50.088,
+"lngTo": 12.3267,
+"dTimeUTC": 1490176500,
+"aTimeUTC": 1490181000,
+"return": 0,
+"price": 1,
+"cityTo": "Treviso",
+"flyFrom": "PRG",
+"latTo": 45.4386,
+"dTime": 1490180100,
+"found_on": null,
+"airline": "W6",
+"cityFrom": "Prague",
+"aTime": 1490184600
+}
+],
+"distance": 540.7
+}
+],
+"refresh": []
+}
