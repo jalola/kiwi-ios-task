@@ -23,15 +23,15 @@ class Flight {
     var countryFrom: String = ""
     var countryTo: String = ""
     var price: Float = 0
-    
-    var timeDeparture: String = ""
-    var timeArrival: String = ""
+    var currency = ""
+    var timeDeparture: Double = 0
+    var timeArrival: Double = 0
     var duration: String = ""
     var date: String = ""
     var route: [Flight] = []
     
     init(json: [String:Any]){
-        print("--------------------")
+//        print("--------------------")
         
         cityFrom = (json["cityFrom"] as? String)!
         cityFromId = (json["mapIdfrom"] as? String)!
@@ -57,27 +57,35 @@ class Flight {
         
         price = (json["price"] as? Float)!
         
-        timeDeparture = "1"
-        timeArrival = "1"
-        duration = "1"
-        date = "1"
+        if json.index(forKey: "dTime") != nil {
+            timeDeparture = (json["dTime"] as? Double)!
+        }
+        
+        if json.index(forKey: "aTime") != nil {
+            timeArrival = (json["aTime"] as? Double)!
+        }
         
         if json.index(forKey: "route") != nil {
             let list = json["route"] as? [[String:Any]]
             route = (list?.map{ Flight(json: $0) })!
         }
         
-        print(route.count)
-        
-        print(cityFromId)
-        print(cityToId)
+//        print(route.count)
+//        
+//        print(cityFromId)
+//        print(cityToId)
     }
     
     open class func parseFlight(_ json: [String:Any]) -> [Flight] {
         let list = json["data"] as? [[String:Any]]
         
         if !(list?.isEmpty)!{
-            return (list?.map{ Flight(json: $0) })!
+            let result = (list?.map{ Flight(json: $0) })!
+            for flight in result{
+                flight.currency = Helper.getCurrencySymbol(currency: (json["currency"] as? String)!)
+//                print(flight.currency)
+            }
+            return result
         }
         else{
             return []

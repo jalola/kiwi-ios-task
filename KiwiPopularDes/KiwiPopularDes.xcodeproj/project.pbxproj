@@ -10,6 +10,7 @@
 		086D57CE8FB5BAAC3974F2F5 /* Pods_KiwiPopularDes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458667686F21ACE04B49B346 /* Pods_KiwiPopularDes.framework */; };
 		0E319A6C1E6F4B5600C092A8 /* ic_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E319A6B1E6F4B5500C092A8 /* ic_next.png */; };
 		0E49DE661E707E0D000118A6 /* ic_arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E49DE651E707E0D000118A6 /* ic_arrow_right.png */; };
+		0E49DE691E709AC7000118A6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E49DE681E709AC7000118A6 /* Helper.swift */; };
 		0E57E9671E6F350300EF0546 /* ListDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E57E9661E6F350300EF0546 /* ListDestinationViewController.swift */; };
 		0E57E9691E6F373A00EF0546 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E57E9681E6F373A00EF0546 /* Flight.swift */; };
 		0E57E96C1E6F386D00EF0546 /* list_flights in Resources */ = {isa = PBXBuildFile; fileRef = 0E57E96B1E6F386D00EF0546 /* list_flights */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		0E319A6B1E6F4B5500C092A8 /* ic_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_next.png; sourceTree = "<group>"; };
 		0E49DE651E707E0D000118A6 /* ic_arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_right.png; sourceTree = "<group>"; };
+		0E49DE681E709AC7000118A6 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		0E57E9661E6F350300EF0546 /* ListDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDestinationViewController.swift; sourceTree = "<group>"; };
 		0E57E9681E6F373A00EF0546 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		0E57E96B1E6F386D00EF0546 /* list_flights */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = list_flights; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 				0E319A6B1E6F4B5500C092A8 /* ic_next.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		0E49DE671E709AB9000118A6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				0E49DE681E709AC7000118A6 /* Helper.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 		0E57E9631E6F34CC00EF0546 /* viewcontrollers */ = {
@@ -113,6 +123,7 @@
 		0EAFB12B1E6F27CD00E30801 /* KiwiPopularDes */ = {
 			isa = PBXGroup;
 			children = (
+				0E49DE671E709AB9000118A6 /* services */,
 				0E57E96A1E6F384F00EF0546 /* resources */,
 				0E57E9651E6F34D100EF0546 /* models */,
 				0E57E9631E6F34CC00EF0546 /* viewcontrollers */,
@@ -272,6 +283,7 @@
 			files = (
 				0E57E9691E6F373A00EF0546 /* Flight.swift in Sources */,
 				0EAFB12D1E6F27CD00E30801 /* AppDelegate.swift in Sources */,
+				0E49DE691E709AC7000118A6 /* Helper.swift in Sources */,
 				0E83006D1E6F831F001FCD8F /* FlightDetailViewController.swift in Sources */,
 				0E57E9671E6F350300EF0546 /* ListDestinationViewController.swift in Sources */,
 			);

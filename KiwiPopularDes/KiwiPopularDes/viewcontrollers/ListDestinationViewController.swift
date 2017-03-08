@@ -21,7 +21,6 @@ class FlightCell: UITableViewCell {
 
 class ListDestinationViewController : UITableViewController{
     
-    
     var flights: [Flight] = []{
         didSet{
             self.tableView.reloadData()
@@ -46,7 +45,6 @@ class ListDestinationViewController : UITableViewController{
         return flights.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightCell
         
@@ -54,6 +52,8 @@ class ListDestinationViewController : UITableViewController{
         cell?.labelCityTo.text = aFlight.cityTo
         cell?.labelCountryTo.text = aFlight.countryTo
         cell?.labelPrice.text = String(aFlight.price)
+        
+        print(aFlight.currency)
         
         cell?.preservesSuperviewLayoutMargins = false
         cell?.separatorInset = UIEdgeInsets.zero
