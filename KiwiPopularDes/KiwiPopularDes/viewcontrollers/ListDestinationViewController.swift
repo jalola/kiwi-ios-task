@@ -30,15 +30,80 @@ class ListDestinationViewController : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://api.skypicker.com/flights?v=2&sort=popularity&asc=0&locale=en&daysInDestinationFrom=&daysInDestinationTo=&affilid=&children=0&infants=0&flyFrom=CZ&to=anywhere&featureName=aggregateResults&dateFrom=06/03/2017&dateTo=06/04/2017&typeFlight=oneway&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=5"
+        let todayJsonFile = Helper.getDateForAPI(offset: 0, sep: "-") + "-json"
+        let todayJson = Helper.readFile(todayJsonFile)
         
-        Alamofire.request(urlString).responseJSON { response in
+        if todayJson == "" {
+            let today = Helper.getDateForAPI(offset: 0, sep: "/")
+            let nextMonth = Helper.getDateForAPI(offset: 30, sep: "/")
             
-            if let jsonDict = response.result.value as? [String:Any] {
-                self.flights = Flight.parseFlight(jsonDict)
+            let urlString = "https://api.skypicker.com/flights?v=2&sort=popularity&asc=0&locale=en&daysInDestinationFrom=&daysInDestinationTo=&affilid=&children=0&infants=0&flyFrom=CZ&to=anywhere&featureName=aggregateResults&dateFrom=\(today)&dateTo=\(nextMonth)&typeFlight=oneway&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=10"
+            
+            Alamofire.request(urlString).responseJSON { response in
+                
+                if let jsonDict = response.result.value as? [String:Any] {
+                    self.getOffersForToday(jsonDict: jsonDict)
+                }
             }
         }
+        else{
+            self.getOffersForToday(jsonDict: Helper.stringToJson(text: todayJson)!)
+        }
+    }
+    
+    func getOffersForToday(jsonDict: [String:Any]){
         
+        let allFlights = Flight.parseFlight(jsonDict)
+        var availableOffers = [Flight]()
+        
+        let yesterdayOfferFile = Helper.getDateForAPI(offset: -1, sep: "-") + "-offer"
+        let yesterdayOffers = Helper.readFile(yesterdayOfferFile)
+        
+        print("yesterday offers: \(yesterdayOffers)")
+        if yesterdayOffers != ""{
+            let previousOffers = yesterdayOffers.components(separatedBy: ",")
+            
+            for aFlight in allFlights{
+                var found = false
+                for cityToId in previousOffers{
+                    if cityToId == aFlight.cityToId{
+                        found = true
+                        break
+                    }
+                }
+                if found == false{
+                    availableOffers.append(aFlight)
+                }
+            }
+        }
+        else{
+            availableOffers = allFlights
+        }
+        
+        if availableOffers.count > 5{
+            self.flights = Array(availableOffers.prefix(5))
+        }
+        else{
+            self.flights = availableOffers
+        }
+        
+        //save today offers
+        let jsonString = Helper.jsonToString(json: jsonDict)
+        //print(jsonString)
+        
+        let todayJsonFile = Helper.getDateForAPI(offset: 0, sep: "-") + "-json"
+        Helper.writeFile(todayJsonFile, text: jsonString)
+        
+        var destinations = [String]()
+        for aFlight in self.flights{
+            destinations.append(aFlight.cityToId)
+        }
+        
+        let todayOffers = destinations.joined(separator: ",")
+        print("today offers: \(todayOffers)")
+        
+        let todayOfferFile = Helper.getDateForAPI(offset: 0, sep: "-") + "-offer"
+        Helper.writeFile(todayOfferFile, text: todayOffers)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,8 +117,6 @@ class ListDestinationViewController : UITableViewController{
         cell?.labelCityTo.text = aFlight.cityTo
         cell?.labelCountryTo.text = aFlight.countryTo
         cell?.labelPrice.text = String(aFlight.price)
-        
-        print(aFlight.currency)
         
         cell?.preservesSuperviewLayoutMargins = false
         cell?.separatorInset = UIEdgeInsets.zero

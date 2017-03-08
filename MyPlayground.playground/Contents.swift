@@ -48,3 +48,18 @@ getDayOfWeek(1490674200)
 getDayOfWeek(1490680800)
 getDate(1490674200)
 getDate(1490680800)
+
+
+
+func getDateForAPI(offset: Int)->String {
+    let date = Calendar.current.date(byAdding: .day, value: offset, to: Date())!
+    
+    let formatter  = DateFormatter()
+    formatter.dateFormat = "dd/MM/yyyy"
+    let result = formatter.string(from: date)
+    
+    return result
+}
+
+getDateForAPI(offset: 30)
+

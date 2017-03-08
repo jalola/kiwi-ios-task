@@ -75,5 +75,69 @@ open class Helper {
         return result
     }
     
-}
+    open class func getDateForAPI(offset: Int, sep: String)->String {
+        let date = Calendar.current.date(byAdding: .day, value: offset, to: Date())!
+        
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "dd\(sep)MM\(sep)yyyy"
+        let result = formatter.string(from: date)
+        
+        return result
+    }
+    
+    open class func writeFile(_ fileName: String, text: String) -> Void{
+        if let dir = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first {
+            let path = URL(fileURLWithPath: dir).appendingPathComponent(fileName)
+            
+            print(path)
+            
+            //writing
+            do {
+                try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+            }
+            catch {/* error handling here */}
+        }
+    }
+    
+    open class func readFile(_ fileName: String) -> String{
+        if let dir = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first {
+            let path = URL(fileURLWithPath: dir).appendingPathComponent(fileName)
+            
+            print(path)
+            
+            //reading
+            do {
+                let text = try NSString(contentsOf: path, encoding: String.Encoding.utf8.rawValue)
+                return text as String
+            }
+            catch {/* error handling here */
+                return ""
+            }
+        }
+        
+        return ""
+    }
 
+    open class func jsonToString(json: [String:Any]) -> String{
+        do {
+            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let convertedString = String(data: data1, encoding: String.Encoding.utf8)
+            return convertedString!
+            
+        } catch let myJSONError {
+            print(myJSONError)
+            return ""
+        }
+    }
+    
+    open class func stringToJson(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+}

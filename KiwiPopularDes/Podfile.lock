@@ -1,31 +1,22 @@
 PODS:
   - Alamofire (4.0.1)
-  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Homely/Alamofire.git`, branch `ios8`)
-  - SwiftyJSON (from `https://github.com/acegreen/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
   Alamofire:
     :branch: ios8
     :git: https://github.com/Homely/Alamofire.git
-  SwiftyJSON:
-    :branch: swift3
-    :git: https://github.com/acegreen/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   Alamofire:
     :commit: 276386cf230cb7e91964ca0021e7ddfa58d2439c
     :git: https://github.com/Homely/Alamofire.git
-  SwiftyJSON:
-    :commit: 8971384559780e631b041ac91b16734a396d4c14
-    :git: https://github.com/acegreen/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: d8ab1487ca8accacde5d0c65ae8144bdf9a264b8
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 2bb57d22aaae2d06b18399956d40194f8384e0b8
+PODFILE CHECKSUM: f7669389263d7d552c26cd27e524865d81e9e3ae
 
 COCOAPODS: 1.2.0.beta.1

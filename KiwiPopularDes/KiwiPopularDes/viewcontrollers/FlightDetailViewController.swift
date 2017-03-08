@@ -78,6 +78,10 @@ class FlightDetailViewController: UIViewController, UITableViewDelegate, UITable
         else{
             self.labelDetailDuration.text = String(flight.route.count-1) + " stops - Duration: " + flight.duration
         }
+        
+        tableViewConection.preservesSuperviewLayoutMargins = false
+        tableViewConection.separatorInset = UIEdgeInsets.zero
+        tableViewConection.layoutMargins = UIEdgeInsets.zero
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,9 +105,6 @@ class FlightDetailViewController: UIViewController, UITableViewDelegate, UITable
         cell?.lTimeDe.text = Helper.getTime(aFlight.timeDeparture)
         cell?.lTimeArr.text = Helper.getTime(aFlight.timeArrival)
         
-        cell?.preservesSuperviewLayoutMargins = false
-        cell?.separatorInset = UIEdgeInsets.zero
-        cell?.layoutMargins = UIEdgeInsets.zero
         
         return cell!
     }

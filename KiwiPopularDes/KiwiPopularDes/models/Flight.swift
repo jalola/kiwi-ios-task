@@ -31,8 +31,6 @@ class Flight {
     var route: [Flight] = []
     
     init(json: [String:Any]){
-//        print("--------------------")
-        
         cityFrom = (json["cityFrom"] as? String)!
         cityFromId = (json["mapIdfrom"] as? String)!
         cityTo = (json["cityTo"] as? String)!
@@ -69,11 +67,6 @@ class Flight {
             let list = json["route"] as? [[String:Any]]
             route = (list?.map{ Flight(json: $0) })!
         }
-        
-//        print(route.count)
-//        
-//        print(cityFromId)
-//        print(cityToId)
     }
     
     open class func parseFlight(_ json: [String:Any]) -> [Flight] {
@@ -83,7 +76,6 @@ class Flight {
             let result = (list?.map{ Flight(json: $0) })!
             for flight in result{
                 flight.currency = Helper.getCurrencySymbol(currency: (json["currency"] as? String)!)
-//                print(flight.currency)
             }
             return result
         }
