@@ -57,11 +57,11 @@ open class Helper {
         let myCalendar = Calendar(identifier: Calendar.Identifier.gregorian)
         let myComponents = (myCalendar as NSCalendar).components([.hour, .minute, .second], from: aDate)
         
-        if myComponents.minute != 0{
+        if myComponents.minute! >= 10{
             return "\(myComponents.hour!):\(myComponents.minute!)"
         }
         else{
-            return "\(myComponents.hour!):00"
+            return "\(myComponents.hour!):0\(myComponents.minute!)"
         }
     }
     
